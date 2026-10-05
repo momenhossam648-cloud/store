@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - VibeMarket</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">Vibe<span>Market</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Shop</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle" aria-label="Toggle Theme">🌙</button>
+                <div class="cart-icon-container">
+                    <a href="#" id="cart-nav-link" class="cart-btn">🛒 <span id="cart-count">0</span></a>
+                </div>
+                <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Main Shop View -->
+        <div id="shop-view">
+            <div class="shop-toolbar">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search products...">
+                </div>
+                <div class="filters">
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="Electronics">Electronics</button>
+                    <button class="filter-btn" data-category="Clothing">Clothing</button>
+                    <button class="filter-btn" data-category="Accessories">Accessories</button>
+                </div>
+            </div>
+            <div id="products-list" class="products-grid">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+
+        <!-- Product Details View (Hidden by default) -->
+        <div id="details-view" class="details-view hidden">
+            <button id="back-to-shop" class="btn btn-secondary">&larr; Back to Shop</button>
+            <div id="product-details-content" class="details-container">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+
+        <!-- Shopping Cart View (Hidden by default) -->
+        <div id="cart-view" class="cart-view hidden">
+            <button id="back-to-shop-from-cart" class="btn btn-secondary">&larr; Continue Shopping</button>
+            <h2>Your Shopping Cart</h2>
+            <div class="cart-container">
+                <div id="cart-items-list" class="cart-items">
+                    <!-- Dynamically populated -->
+                </div>
+                <div class="cart-summary">
+                    <h3>Order Summary</h3>
+                    <div class="summary-row">
+                        <span>Total Items:</span>
+                        <span id="summary-count">0</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total Price:</span>
+                        <span id="summary-total">$0.00</span>
+                    </div>
+                    <button class="btn btn-primary checkout-btn" onclick="alert('This is a demo store. Real payment processing is not implemented.')">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 VibeMarket. Built as a portfolio project. Demo Store Only.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
